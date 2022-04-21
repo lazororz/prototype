@@ -1,5 +1,5 @@
 <?php session_start();
-
+include 'php/functions/function.inc.php';
 if (empty($_SESSION['code']) || time() - $_SESSION['code_time'] > 3600)
     //if there's no code, or the code has expired
     regenerate();
