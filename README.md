@@ -1,2 +1,2 @@
 # prototype
-School opdracht
+*School opdracht*
