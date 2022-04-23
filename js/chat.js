@@ -6,7 +6,7 @@ $(document).ready(function () {
 
         var message = $('#message').val();
 
-        $.post("../php/add.php", { message, id: "<?php echo $token;?>" })
+        $.post("../php/process/add.php", { message, id: "<?php echo $token;?>" })
             .done(function (message) {
                 alert('toegevoegd!');
             })

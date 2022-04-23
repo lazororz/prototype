@@ -31,7 +31,7 @@ echo "Your code is " . $_SESSION['code'] . " it was generated on " . date('m/d/Y
     <form id="form" class="row g-3" >
       <div class="col-auto">
         <label for="message" class="visually-hidden">typ </label>
-        <input type="text" name="" id="message" class="form-control">
+        <input type="text" name="" id="message" class="form-control" required>
       </div>
       <div class="col-auto">
         <button type="submit" class="btn">Submit</button>
