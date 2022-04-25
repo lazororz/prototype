@@ -9,13 +9,38 @@ function add()
 {
     session_start();
 
-    echo $_SESSION['code'];
-   /* require '../database/config.php';
+   
+    require '../database/config.php';
 
+    $uid= $_SESSION['code'];
     $msg = htmlentities($_POST['message']);
-    $date =  date('Y-m-d H:i:s', strtotime(str_replace('-', '/', $date)));
+    $date =  date('Y-m-d H:i:s', time());
 
-    $stmt = $conn->prepare("");
-    $stmt->bind_param("sss", $firstname, $msg, $date);
-    */
+    echo $uid . " " . $date . " ". $msg;
+    
+  
+    $stmt = $conn->prepare("INSERT INTO `bericht`(`message`, `datum`,  `uniek_id`) VALUES (?,?,?)");
+    $stmt->bind_param("sss", $msg, $date, $uid);
+    
+    if ($stmt->execute()) {
+        echo 'ok!';
+        return;
+    }
+    
+}
+
+function show()
+{
+    require_once '../database/config.php';
+
+    $data = [];
+    $sql = "SELECT * FROM `bericht` WHERE `datum` ORDER BY `bericht`.`datum` DESC";
+
+    $result = mysqli_query($conn, $sql);
+
+    while ($row = mysqli_fetch_array($result) ) {
+        $data[] = $row;
+    }
+    echo json_encode($data);
+    return;
 }
