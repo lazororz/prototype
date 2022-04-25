@@ -6,9 +6,11 @@ $(document).ready(function () {
 
         var message = $('#message').val();
 
-        $.post("../php/process/add.php", { message, id: "<?php echo $token;?>" })
+        $.post("php/process/add.php", { message, id: "<?php echo $token;?>" })
             .done(function (message) {
-                alert('toegevoegd!');
+                if (message !== '') {
+                    alert("Toegevoed");
+                }else alert('iets invullen');
             })
             .fail(function(){
                 alert('erroe');
@@ -16,5 +18,11 @@ $(document).ready(function () {
 
     });
 
-
+        function name(params) {
+            $.getJSON("url", data,
+                function (data, textStatus, jqXHR) {
+                    
+                }
+            );
+        }
 });
