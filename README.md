@@ -1,12 +1,6 @@
 # prototype 
 *Sahil Ramlal*
 
-	```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
-```
+![Prototype](https://www.leanpeople.nl/wp-content/uploads/2021/06/Prototype-fase.png)
 > **dit is een schoolopdracht**
 > een prototype wordt gemaakt voor de klant
