@@ -1,4 +1,5 @@
-# prototype
-*School opdracht*
+# prototype *Sahil Ramlal*
 
-> leuke opdracht top
+
+> **dit is een schoolopdracht**
+> een prototype wordt gemaakt voor de klant
